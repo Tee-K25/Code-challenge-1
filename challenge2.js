@@ -1,18 +1,18 @@
 function checkSpeed(speed) {
-  const points = 5;
+  const range = 5;
   const speedLimit = 70;
-  const pointLImit = 12;
+  const pointLimit = 12;
   if (speed <= speedLimit) {
-    return "Kudos! Keep driving safetly";
+    return "Ok";
   } else {
     const pastSpeedL = speed - speedLimit;
-    const points = Math.floor(speed / points);
-    if (points > pointLImit) {
-      return "LICENCED SUSPENDED";
-    } else {
-      return `points ${points}`;
+    const points = Math.floor(pastSpeedL / range);
+    if (points > pointLimit) {
+      return "LICENSE SUSPENDED";
+    } else if (points <= pointLimit) {
+      return `points: ${points}`;
     }
   }
 }
-const speed = parseInt("200");
+const speed = parseInt("75");
 console.log(checkSpeed(speed));
