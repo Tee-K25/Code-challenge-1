@@ -13,6 +13,6 @@ function calculateGrade(marks) {
     return "not within valid range";
   }
 }
-let marks = parseInt(60);
-let grid = calculateGrade(marks);
-console.log(grid);
+let marks = parseInt(20); // Enter marks here
+let outCome = calculateGrade(marks);
+console.log(outCome);
